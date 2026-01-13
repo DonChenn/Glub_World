@@ -1,71 +1,71 @@
-@Font-Face {
-    font-family: 'Omori';
-    src: url('../assets/fonts/OMORI_GAME2.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+@font-face {
+  font-family: "Omori";
+  src: url("../assets/fonts/OMORI_GAME2.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
-    background: url('../assets/art/hotseat.gif');
+  background: url("../assets/art/hotseat.gif");
 }
 
 #pengy {
-    position: absolute;
-    bottom: 25px;
-    left: 100px;
-    scale: 25%;
+  position: absolute;
+  bottom: 25px;
+  left: 100px;
+  scale: 25%;
 }
 
 #game-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 600px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 20px;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  text-align: center;
 }
 
 #question-text {
-    font-size: 2em;
-    margin-bottom: 20px;
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 
 #options-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 #options-container button {
-    background-color: mediumpurple;
-    color: white;
-    border: none;
-    padding: 15px;
-    font-size: 2em;
-    font-family: 'Omori', sans-serif;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+  background-color: mediumpurple;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 2em;
+  font-family: "Omori", sans-serif;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 #options-container button:hover {
-    background-color: rebeccapurple;
+  background-color: rebeccapurple;
 }
 
 #quest_pending_icon {
-    position: absolute;
-    bottom: 120px;
-    left: 100px;
-    transform: scale(0.5);
+  position: absolute;
+  bottom: 120px;
+  left: 100px;
+  transform: scale(0.5);
 }
 
 #quest_pending_icon img {
-    scale: 0.5;
+  scale: 0.5;
 }

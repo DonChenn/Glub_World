@@ -1,65 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="icon" href="assets/sprites/glubglub.gif" type="image/png">
+  <link rel="icon" href="assets/sprites/glubglub.gif" type="image/png" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anniversary Wrapped!</title>
-  <link rel="stylesheet" href="css/login.css">
-</head>
-<body class="login">
-
-<div id="start-screen">
-  <h1>Click anywhere to start</h1>
-</div>
-
-<canvas id="confetti-canvas"></canvas>
-
-<div class="App">
-  <header class="App-header">
-    <h2 class="to">Hello Thuyen,</h2>
-    <h1>Happy 7th Anniversary!</h1>
-    <h2 class="from">- Donovan</h2>
-    <img src="assets/sprites/cake.gif" alt="cake gif"/>
-  </header>
-
-  <form id="login-form">  <div class="login-grid">
-    <div class="username-group">
-      <label for="username">Username:</label>
-      <div>
-        <input type="text" id="username" />
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anniversary Wrapped!</title>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body class="login">
+    <div id="start-screen">
+      <h1>Click anywhere to start</h1>
     </div>
 
-    <div class="password-group">
-      <label for="password">Password:</label>
-      <div>
-        <input type="text" id="password" />
-      </div>
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="App">
+      <header class="App-header">
+        <h2 class="to">Hello Thuyen,</h2>
+        <h1>Happy 7th Anniversary!</h1>
+        <h2 class="from">- Donovan</h2>
+        <img src="assets/sprites/cake.gif" alt="cake gif" />
+      </header>
+
+      <form id="login-form">
+        <div class="login-grid">
+          <div class="username-group">
+            <label for="username">Username:</label>
+            <div>
+              <input type="text" id="username" />
+            </div>
+          </div>
+
+          <div class="password-group">
+            <label for="password">Password:</label>
+            <div>
+              <input type="text" id="password" />
+            </div>
+          </div>
+        </div>
+
+        <button type="submit">Login</button>
+      </form>
+      <p id="message"></p>
     </div>
-  </div>
 
-    <button type="submit">Login</button>
-  </form>
-  <p id="message"></p>
-</div>
+    <div>
+      <footer class="login-footer">
+        <a
+          href="https://open.spotify.com/album/1P89EVy4va2kLDIgHY2vbc?si=K6Q1RjQ_SimabzEPKStPUQ"
+          target="_blank"
+        >
+          Full Album OST
+        </a>
 
-<div>
-  <footer class="login-footer">
-    <a href="https://open.spotify.com/album/1P89EVy4va2kLDIgHY2vbc?si=K6Q1RjQ_SimabzEPKStPUQ" target="_blank"> Full Album OST </a>
+        <div class="linkedin">
+          <a href="https://linkedin.com/in/donovanachen" target="_blank">
+            linkedin.com/in/donovanachen
+          </a>
+        </div>
 
-    <div class="linkedin">
-      <a href="https://linkedin.com/in/donovanachen" target="_blank"> linkedin.com/in/donovanachen </a>
+        <a href="https://github.com/DonChenn/Glub_World" target="_blank">
+          github.com/DonChenn/Anniversary
+        </a>
+      </footer>
     </div>
 
-    <a href="https://github.com/DonChenn/Glub_World" target="_blank"> github.com/DonChenn/Anniversary </a>
-  </footer>
-</div>
+    <audio
+      id="background-music"
+      src="assets/sound/title_theme.mp3"
+      loop
+    ></audio>
 
-<audio id="background-music" src="assets/sound/title_theme.mp3" loop ></audio>
-
-<script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
-<script src="js/login.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
+    <script src="js/login.js"></script>
+  </body>
 </html>

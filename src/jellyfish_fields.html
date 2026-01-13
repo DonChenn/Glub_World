@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glub World</title>
-  <link rel="stylesheet" href="css/jellyfish_fields.css">
-  <link rel="stylesheet" href="css/ocean.css">
-  <link rel="stylesheet" href="css/map.css">
-  <link rel="icon" href="assets/sprites/glubglub.gif" type="image/png">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glub World</title>
+    <link rel="stylesheet" href="css/jellyfish_fields.css" />
+    <link rel="stylesheet" href="css/ocean.css" />
+    <link rel="stylesheet" href="css/map.css" />
+    <link rel="icon" href="assets/sprites/glubglub.gif" type="image/png" />
+  </head>
+  <body>
+    <div id="character">
+      <img src="assets/sprites/glubglub.gif" alt="character" />
+    </div>
 
-<div id="character">
-  <img src="assets/sprites/glubglub.gif" alt="character">
-</div>
+    <h1>Jellyfish Fields</h1>
 
-<h1>
-  Jellyfish Fields
-</h1>
+    <div id="dog">
+      <img src="assets/sprites/dog.gif" alt="woof" />
+    </div>
 
-<div id="dog">
-  <img src="assets/sprites/dog.gif" alt="woof">
-</div>
+    <div id="dialogue-box">
+      <p id="dialogue-text"></p>
+    </div>
 
-<div id="dialogue-box">
-  <p id="dialogue-text"></p>
-</div>
+    <div id="map-overlay">
+      <div id="map-container"></div>
+    </div>
 
-<div id="map-overlay">
-  <div id="map-container"></div>
-</div>
+    <audio id="dialogue-sound" src="assets/sound/dialogue.mp3" loop></audio>
+    <audio
+      id="background-music"
+      src="assets/sound/main_theme.mp3"
+      loop
+      autoplay
+    ></audio>
 
-<audio id="dialogue-sound" src="assets/sound/dialogue.mp3" loop></audio>
-<audio id="background-music" src="assets/sound/main_theme.mp3" loop autoplay></audio>
-
-<script src="js/movement.js"></script>
-<script src="js/dialogue.js"></script>
-<script src="js/jellyfish_fields.js"></script>
-<script src="js/background_music.js"></script>
-<script src="js/map.js"></script>
-</body>
+    <script src="js/movement.js"></script>
+    <script src="js/dialogue.js"></script>
+    <script src="js/jellyfish_fields.js"></script>
+    <script src="js/background_music.js"></script>
+    <script src="js/map.js"></script>
+  </body>
 </html>

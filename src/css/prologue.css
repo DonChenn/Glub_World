@@ -1,67 +1,68 @@
-@Font-Face {
-    font-family: 'Omori';
-    src: url('../assets/fonts/OMORI_GAME2.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+@font-face {
+  font-family: "Omori";
+  src: url("../assets/fonts/OMORI_GAME2.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    cursor: pointer;
-    font-family: Omori, sans-serif;
-    font-weight: bold;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: Omori, sans-serif;
+  font-weight: bold;
 }
 
 #slideshow-container {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: background-image 1s ease-in-out;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
 }
 
 #dialogue-box {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    max-width: 900px;
-    background-color: white;
-    color: black;
-    border: 3px solid black;
-    border-radius: 15px;
-    padding: 20px;
-    box-sizing: border-box;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 900px;
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  border-radius: 15px;
+  padding: 20px;
+  box-sizing: border-box;
 
-    cursor: url('../assets/cursors/happycursor.png'), default;
+  cursor: url("../assets/cursors/happycursor.png"), default;
 }
 
 #dialogue-text {
-    margin: 0;
-    font-size: 28px;
-    line-height: 1.4;
-    text-align: left;
-    white-space: pre-wrap;
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.4;
+  text-align: left;
+  white-space: pre-wrap;
 }
 
 .fade-out {
-    animation: fadeOut 3s forwards;
+  animation: fadeOut 3s forwards;
 }
 
 @keyframes fadeOut {
-    from {
-        opacity: 1;
-        background-color: lightblue;
-    }
-    to {
-        opacity: 0;
-        background-color: #040a24;
-    }
+  from {
+    opacity: 1;
+    background-color: lightblue;
+  }
+  to {
+    opacity: 0;
+    background-color: #040a24;
+  }
 }

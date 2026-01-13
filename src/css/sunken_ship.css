@@ -1,60 +1,62 @@
 body {
-    background: url('../assets/art/sunken_ship.gif');
+  background: url("../assets/art/sunken_ship.gif");
 }
 
 #catfish {
-    scale: 30%;
-    position: absolute;
-    bottom: -50px;
-    left: 100px;
+  scale: 30%;
+  position: absolute;
+  bottom: -50px;
+  left: 100px;
 }
 
-#quest_icon, #quest_pending_icon {
-    position: absolute;
-    bottom: 20px;
-    left: 100px;
-    transform: scale(0.5);
+#quest_icon,
+#quest_pending_icon {
+  position: absolute;
+  bottom: 20px;
+  left: 100px;
+  transform: scale(0.5);
 }
 
-#quest_icon img, #quest_pending_icon img {
-    scale: 0.5;
+#quest_icon img,
+#quest_pending_icon img {
+  scale: 0.5;
 }
 
 #note-overlay {
-    display: flex;
-    position: fixed;
-    scale: 2;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
-    z-index: 100;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  position: fixed;
+  scale: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
 }
 
 #note-content {
-    position: relative;
-    text-align: left;
-    width: 500px;
+  position: relative;
+  text-align: left;
+  width: 500px;
 }
 
 #note-open {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 #note-text {
-    position: absolute;
-    top: 63%;
-    left: 57%;
-    transform: translate(-50%, -50%);
-    color: black;
-    font-size: 1em;
-    font-weight: bold;
-    width: 90%;
-    box-sizing: border-box;
-    padding: 0 20px;
+  position: absolute;
+  top: 63%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 1em;
+  font-weight: bold;
+  width: 90%;
+  box-sizing: border-box;
+  padding: 0 20px;
 }

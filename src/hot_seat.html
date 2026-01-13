@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glub World</title>
-  <link rel="stylesheet" href="css/hotseat.css">
-  <link rel="stylesheet" href="css/ocean.css">
-  <link rel="stylesheet" href="css/map.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glub World</title>
+    <link rel="stylesheet" href="css/hotseat.css" />
+    <link rel="stylesheet" href="css/ocean.css" />
+    <link rel="stylesheet" href="css/map.css" />
 
-  <link rel="icon" href="assets/sprites/glubglub.gif" type="image/png">
-</head>
-<body>
+    <link rel="icon" href="assets/sprites/glubglub.gif" type="image/png" />
+  </head>
+  <body>
+    <div id="character">
+      <img src="assets/sprites/glubglub.gif" alt="character" />
+    </div>
 
-<div id="character">
-  <img src="assets/sprites/glubglub.gif" alt="character">
-</div>
+    <div id="pengy">
+      <img src="assets/sprites/pengy.gif" alt="pengy_character" />
+    </div>
 
-<div id="pengy">
-  <img src="assets/sprites/pengy.gif" alt="pengy_character">
-</div>
+    <div id="dialogue-box">
+      <p id="dialogue-text"></p>
+    </div>
 
-<div id="dialogue-box">
-  <p id="dialogue-text"></p>
-</div>
+    <div id="game-container" style="display: none">
+      <h2 id="question-text"></h2>
+      <div id="options-container"></div>
+    </div>
 
-<div id="game-container" style="display: none;">
-  <h2 id="question-text"></h2>
-  <div id="options-container"></div>
-</div>
+    <div id="quest_pending_icon">
+      <img src="assets/sprites/quest_pending.png" alt="quest_pending" />
+    </div>
 
-<div id="quest_pending_icon">
-  <img src="assets/sprites/quest_pending.png" alt="quest_pending">
-</div>
+    <div id="map-overlay">
+      <div id="map-container"></div>
+    </div>
 
-<div id="map-overlay">
-  <div id="map-container"></div>
-</div>
+    <audio id="dialogue-sound" src="assets/sound/dialogue.mp3" loop></audio>
+    <audio
+      id="background-music"
+      src="assets/sound/hot_seat.mp3"
+      loop
+      autoplay
+    ></audio>
 
-<audio id="dialogue-sound" src="assets/sound/dialogue.mp3" loop></audio>
-<audio id="background-music" src="assets/sound/hot_seat.mp3" loop autoplay></audio>
-
-<script src="js/movement.js"></script>
-<script src="js/dialogue.js"></script>
-<script src="js/hot_seat.js"></script>
-<script src="js/background_music.js"></script>
-<script src="js/map.js"></script>
-
-</body>
+    <script src="js/movement.js"></script>
+    <script src="js/dialogue.js"></script>
+    <script src="js/hot_seat.js"></script>
+    <script src="js/background_music.js"></script>
+    <script src="js/map.js"></script>
+  </body>
 </html>

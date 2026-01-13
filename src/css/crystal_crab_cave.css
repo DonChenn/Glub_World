@@ -1,8 +1,8 @@
 body {
-    background: url('../assets/art/pre_crab.gif');
+  background: url("../assets/art/pre_crab.gif");
 }
 
 body.activated {
-    background: url('../assets/art/crystal_crab_cave.gif');
-    background-size: cover;
+  background: url("../assets/art/crystal_crab_cave.gif");
+  background-size: cover;
 }

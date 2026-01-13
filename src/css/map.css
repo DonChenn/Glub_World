@@ -1,99 +1,172 @@
 #map-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 200;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Omori', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Omori", sans-serif;
 }
 
 #map-container {
-    width: 95%;
-    max-width: 1200px;
-    height: 90vh;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 15px;
-    grid-template-areas:
-        ". . home . ."
-        ". . wallace . ."
-        "spawn seaweed_castle threek jellyfish_fields ."
-        ". . crevice hot_seat crystal_crab_cave"
-        ". . sunken_ship . .";
+  width: 95vw;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 15px;
+  grid-template-areas:
+    ". . home . ."
+    ". . wallace . ."
+    "spawn seaweed_castle threek jellyfish_fields ."
+    ". . crevice hot_seat crystal_crab_cave"
+    ". . sunken_ship . .";
 }
 
 .map-location {
-    background-color: white;
-    border: 3px solid #000;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 32px;
-    font-weight: bold;
-    position: relative;
-    text-transform: capitalize;
-    color: black;
+  background-color: white;
+  border: 3px solid #000;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: clamp(12px, 2.5vw, 32px);
+  font-weight: bold;
+  position: relative;
+  text-transform: capitalize;
+  color: black;
 }
 
 .map-location:not(.visited) {
-    background-color: white;
-    color: black;
-    border-color: #444;
+  background-color: white;
+  color: black;
+  border-color: #444;
 }
 
-#map-home { grid-area: home; }
-#map-wallace { grid-area: wallace; }
-#map-spawn { grid-area: spawn; }
-#map-seaweed_castle { grid-area: seaweed_castle; }
-#map-threek { grid-area: threek; }
-#map-jellyfish_fields { grid-area: jellyfish_fields; }
-#map-crevice { grid-area: crevice; }
-#map-sunken_ship { grid-area: sunken_ship; }
-#map-hot_seat { grid-area: hot_seat; }
-#map-crystal_crab_cave { grid-area: crystal_crab_cave; }
+#map-home {
+  grid-area: home;
+}
+#map-wallace {
+  grid-area: wallace;
+}
+#map-spawn {
+  grid-area: spawn;
+}
+#map-seaweed_castle {
+  grid-area: seaweed_castle;
+}
+#map-threek {
+  grid-area: threek;
+}
+#map-jellyfish_fields {
+  grid-area: jellyfish_fields;
+}
+#map-crevice {
+  grid-area: crevice;
+}
+#map-sunken_ship {
+  grid-area: sunken_ship;
+}
+#map-hot_seat {
+  grid-area: hot_seat;
+}
+#map-crystal_crab_cave {
+  grid-area: crystal_crab_cave;
+}
 
 .visited::after,
 .visited::before {
-    content: '';
-    position: absolute;
-    color: white;
-    font-size: 8em;
-    font-weight: bold;
-    z-index: -1;
-    text-shadow: 0 0 5px black;
+  content: "";
+  position: absolute;
+  color: white;
+  /* Responsive Arrows */
+  font-size: clamp(3em, 8vw, 8em);
+  font-weight: bold;
+  z-index: -1;
+  text-shadow: 0 0 5px black;
 }
 
-#map-spawn.visited::after { content: '→'; right: -2em; top: 50%; transform: translateY(-50%); }
-#map-seaweed_castle.visited::after { content: '→'; right: -0.7em; top: 50%; transform: translateY(-50%); }
-#map-threek.visited[id="map-threek"]::after { content: '→'; right: -0.7em; top: 50%; transform: translateY(-50%); }
-#map-hot_seat.visited::after { content: '→'; right: -0.7em; top: 50%; transform: translateY(-50%); }
+#map-spawn.visited::after {
+  content: "→";
+  right: -2em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#map-seaweed_castle.visited::after {
+  content: "→";
+  right: -0.7em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#map-threek.visited[id="map-threek"]::after {
+  content: "→";
+  right: -0.7em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#map-hot_seat.visited::after {
+  content: "→";
+  right: -0.7em;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-#map-wallace.visited::before { content: '↑'; top: -0.6em; left: 50%; transform: translateX(-50%); }
-#map-threek.visited::before { content: '↑'; top: -0.6em; left: 50%; transform: translateX(-50%); }
+#map-wallace.visited::before {
+  content: "↑";
+  top: -0.6em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#map-threek.visited::before {
+  content: "↑";
+  top: -0.6em;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
+#map-crevice.visited::after {
+  content: "↓";
+  bottom: -0.6em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#map-jellyfish_fields.visited::after {
+  content: "↓";
+  bottom: -0.6em;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-#map-crevice.visited::after { content: '↓'; bottom: -0.6em; left: 50%; transform: translateX(-50%); }
-#map-jellyfish_fields.visited::after { content: '↓'; bottom: -0.6em; left: 50%; transform: translateX(-50%); }
+#map-threek.visited > div::after,
+#map-threek.visited::after {
+  content: "↓";
+  position: absolute;
+  color: white;
+  font-size: clamp(3em, 8vw, 8em);
+  font-weight: bold;
+  z-index: -1;
+  text-shadow: 0 0 5px black;
+  bottom: -0.6em;
+  left: 50%;
+  transform: translateX(-50%);
+  right: auto;
+  top: auto;
+}
 
-#map-threek.visited > div::after, #map-threek.visited::after {
-    content: '↓';
-    position: absolute;
-    color: white;
-    font-size: 8em;
-    font-weight: bold;
-    z-index: -1;
-    text-shadow: 0 0 5px black;
-    bottom: -0.6em;
-    left: 50%;
-    transform: translateX(-50%);
-    right: auto;
-    top: auto;
+@media (max-width: 768px) {
+  #map-overlay {
+    overflow: auto;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+  #map-container {
+    min-width: 600px;
+    height: auto;
+    padding-bottom: 50px;
+  }
 }

@@ -1,11 +1,11 @@
 body {
-    background: url("../assets/art/jelly_city.gif");
+  background: url("../assets/art/jelly_city.gif");
 }
 
 #dog {
-    position: absolute;
-    bottom: 300px;
-    right: 200px;
-    scale: 50%;
-    rotate: 145deg;
+  position: absolute;
+  bottom: 300px;
+  right: 200px;
+  scale: 50%;
+  rotate: 145deg;
 }

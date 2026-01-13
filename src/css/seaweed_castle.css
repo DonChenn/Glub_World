@@ -1,27 +1,29 @@
 body {
-    background: url('../assets/art/seaweed_castle.gif');
+  background: url("../assets/art/seaweed_castle.gif");
 }
 
 #seaweed_puffer {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 #dog {
-    position: absolute;
-    bottom: -200px;
-    right: 100px;
-    scale: 50%;
+  position: absolute;
+  bottom: -200px;
+  right: 100px;
+  scale: 50%;
 }
 
-#quest_icon, #quest_pending_icon {
-    position: absolute;
-    bottom: 120px;
-    right: 50px;
-    transform: scale(0.5);
+#quest_icon,
+#quest_pending_icon {
+  position: absolute;
+  bottom: 120px;
+  right: 50px;
+  transform: scale(0.5);
 }
 
-#quest_icon img, #quest_pending_icon img {
-    scale: 0.5;
+#quest_icon img,
+#quest_pending_icon img {
+  scale: 0.5;
 }

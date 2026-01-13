@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glub World</title>
-  <link rel="stylesheet" href="css/crevice.css">
-  <link rel="stylesheet" href="css/ocean.css">
-  <link rel="stylesheet" href="css/map.css">
-  <link rel="icon" href="assets/sprites/glubglub.gif" type="image/png">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glub World</title>
+    <link rel="stylesheet" href="css/crevice.css" />
+    <link rel="stylesheet" href="css/ocean.css" />
+    <link rel="stylesheet" href="css/map.css" />
+    <link rel="icon" href="assets/sprites/glubglub.gif" type="image/png" />
+  </head>
+  <body>
+    <div id="character">
+      <img src="assets/sprites/glubglub.gif" alt="character" />
+    </div>
 
-<div id="character">
-  <img src="assets/sprites/glubglub.gif" alt="character">
-</div>
+    <h1>Crevice</h1>
 
-<h1>
-  Crevice
-</h1>
+    <div id="map-overlay">
+      <div id="map-container"></div>
+    </div>
 
+    <audio id="dialogue-sound" src="assets/sound/dialogue.mp3" loop></audio>
+    <audio
+      id="background-music"
+      src="assets/sound/sunken_ship.mp3"
+      loop
+      autoplay
+    ></audio>
 
-<div id="map-overlay">
-  <div id="map-container"></div>
-</div>
-
-<audio id="dialogue-sound" src="assets/sound/dialogue.mp3" loop></audio>
-<audio id="background-music" src="assets/sound/sunken_ship.mp3" loop autoplay></audio>
-
-<script src="js/movement.js"></script>
-<script src="js/dialogue.js"></script>
-<script src="js/background_music.js"></script>
-<script src="js/map.js"></script>
-
-</body>
+    <script src="js/movement.js"></script>
+    <script src="js/dialogue.js"></script>
+    <script src="js/background_music.js"></script>
+    <script src="js/map.js"></script>
+  </body>
 </html>

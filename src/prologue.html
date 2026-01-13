@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="icon" href="assets/sprites/glubglub.gif" type="image/png">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/sprites/glubglub.gif" type="image/png" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Glub World</title>
-    <link rel="stylesheet" href="css/prologue.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/prologue.css" />
+  </head>
+  <body>
+    <div id="slideshow-container"></div>
+    <div id="dialogue-box">
+      <p id="dialogue-text"></p>
+    </div>
 
-<div id="slideshow-container"></div>
-<div id="dialogue-box">
-    <p id="dialogue-text"></p>
-</div>
+    <audio id="dialogue-sound" src="assets/sound/dialogue.mp3" loop></audio>
+    <audio
+      id="background-music"
+      src="assets/sound/intro.mp3"
+      loop
+      autoplay
+    ></audio>
+    <audio id="whirlpool-effect" src="assets/sound/whirlpool.mp3"></audio>
 
-<audio id="dialogue-sound" src="assets/sound/dialogue.mp3" loop></audio>
-<audio id="background-music" src="assets/sound/intro.mp3" loop autoplay></audio>
-<audio id="whirlpool-effect" src="assets/sound/whirlpool.mp3"></audio>
-
-<script src="js/dialogue.js"></script>
-<script src="js/prologue.js"></script>
-<script src="js/background_music.js"></script>
-
-</body>
+    <script src="js/dialogue.js"></script>
+    <script src="js/prologue.js"></script>
+    <script src="js/background_music.js"></script>
+  </body>
 </html>

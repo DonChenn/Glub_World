@@ -1,68 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glub World</title>
-  <link rel="stylesheet" href="css/sunken_ship.css">
-  <link rel="stylesheet" href="css/ocean.css">
-  <link rel="stylesheet" href="css/map.css">
-  <link rel="icon" href="assets/sprites/glubglub.gif" type="image/png">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glub World</title>
+    <link rel="stylesheet" href="css/sunken_ship.css" />
+    <link rel="stylesheet" href="css/ocean.css" />
+    <link rel="stylesheet" href="css/map.css" />
+    <link rel="icon" href="assets/sprites/glubglub.gif" type="image/png" />
+  </head>
+  <body>
+    <div id="character">
+      <img src="assets/sprites/glubglub.gif" alt="character" />
+    </div>
 
-<div id="character">
-  <img src="assets/sprites/glubglub.gif" alt="character">
-</div>
+    <div id="catfish">
+      <img src="assets/sprites/catfish.gif" alt="catfish" />
+    </div>
 
-<div id="catfish">
-  <img src="assets/sprites/catfish.gif" alt="catfish">
-</div>
+    <div id="quest_icon">
+      <img src="assets/sprites/quest.png" alt="quest" />
+    </div>
 
-<div id="quest_icon">
-  <img src="assets/sprites/quest.png" alt="quest">
-</div>
+    <div id="quest_pending_icon">
+      <img src="assets/sprites/quest_pending.png" alt="quest_pending" />
+    </div>
 
-<div id="quest_pending_icon">
-  <img src="assets/sprites/quest_pending.png" alt="quest_pending">
-</div>
+    <div id="dialogue-box">
+      <p id="dialogue-text"></p>
+    </div>
 
-<div id="dialogue-box">
-  <p id="dialogue-text"></p>
-</div>
+    <div id="note-overlay">
+      <div id="note-content">
+        <img
+          id="note-open"
+          src="assets/sprites/open_letter.png"
+          alt="Message in a bottle"
+        />
+        <p id="note-text">
+          Dear Glub Glub, <br />
+          Happy 7th Anniversary! This year was filled with space between us.
+          <br />
+          We were separated by schools in SoCal, your internship in San Mateo,
+          <br />
+          and even now with you being sucked in by a whirlpool. But our love<br />
+          will always lie heavy in our hearts, and things that have weight
+          has<br />
+          gravity. One way or another, we always find a way to each other.<br />
+          I am always so happy to be with you. I believe you'll find home,
+          <br />
+          but even if we don't share the same sky or sea, words are<br />
+          the only medium that make us connected. I'll always support you <br />
+          through and through. I'll be waiting for you on the top! I love
+          you!<br />
+          Sincerely,<br />
+          Meow Meow
+        </p>
+      </div>
+    </div>
 
-<div id="note-overlay">
-  <div id="note-content">
-    <img id="note-open" src="assets/sprites/open_letter.png" alt="Message in a bottle">
-    <p id="note-text">
-      Dear Glub Glub, <br>
-      Happy 7th Anniversary! This year was filled with space between us. <br>
-      We were separated by schools in SoCal, your internship in San Mateo, <br>
-      and even now with you being sucked in by a whirlpool. But our love<br>
-      will always lie heavy in our hearts, and things that have weight has<br>
-      gravity. One way or another, we always find a way to each other.<br>
-      I am always so happy to be with you. I believe you'll find home, <br>
-      but even if we don't share the same sky or sea, words are<br>
-      the only medium that make us connected. I'll always support you <br>
-      through and through. I'll be waiting for you on the top! I love you!<br>
-      Sincerely,<br>
-      Meow Meow
-    </p>
-  </div>
-</div>
+    <div id="map-overlay">
+      <div id="map-container"></div>
+    </div>
 
-<div id="map-overlay">
-  <div id="map-container"></div>
-</div>
+    <audio id="dialogue-sound" src="assets/sound/dialogue.mp3" loop></audio>
+    <audio
+      id="background-music"
+      src="assets/sound/sunken_ship.mp3"
+      loop
+      autoplay
+    ></audio>
 
-<audio id="dialogue-sound" src="assets/sound/dialogue.mp3" loop></audio>
-<audio id="background-music" src="assets/sound/sunken_ship.mp3" loop autoplay></audio>
-
-<script src="js/movement.js"></script>
-<script src="js/dialogue.js"></script>
-<script src="js/sunken_ship.js"></script>
-<script src="js/background_music.js"></script>
-<script src="js/map.js"></script>
-
-</body>
+    <script src="js/movement.js"></script>
+    <script src="js/dialogue.js"></script>
+    <script src="js/sunken_ship.js"></script>
+    <script src="js/background_music.js"></script>
+    <script src="js/map.js"></script>
+  </body>
 </html>
