@@ -197,4 +197,40 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
+
+  const debugBoxBottle = document.createElement("div");
+  debugBoxBottle.style.position = "fixed";
+  debugBoxBottle.style.backgroundColor = "rgba(211, 227, 208, 0.3)";
+  debugBoxBottle.style.pointerEvents = "none";
+  debugBoxBottle.style.zIndex = "9999";
+  document.body.appendChild(debugBoxBottle);
+
+  const debugBoxCatfish = document.createElement("div");
+  debugBoxCatfish.style.position = "fixed";
+  debugBoxCatfish.style.backgroundColor = "rgba(211, 227, 208, 0.3)";
+  debugBoxCatfish.style.pointerEvents = "none";
+  debugBoxCatfish.style.zIndex = "9999";
+  document.body.appendChild(debugBoxCatfish);
+
+  function updateDebugHitboxes() {
+    const bottle_x = window.innerWidth / 2.2;
+    const bottle_y = window.innerHeight / 1.6;
+    const catfish_x = window.innerWidth / 3.7;
+    const catfish_y = window.innerHeight / 1.3;
+    const interaction_radius = 75;
+    const diameter = interaction_radius * 2;
+
+    debugBoxBottle.style.width = diameter + "px";
+    debugBoxBottle.style.height = diameter + "px";
+    debugBoxBottle.style.left = bottle_x - interaction_radius + "px";
+    debugBoxBottle.style.top = bottle_y - interaction_radius + "px";
+
+    debugBoxCatfish.style.width = diameter + "px";
+    debugBoxCatfish.style.height = diameter + "px";
+    debugBoxCatfish.style.left = catfish_x - interaction_radius + "px";
+    debugBoxCatfish.style.top = catfish_y - interaction_radius + "px";
+  }
+
+  updateDebugHitboxes();
+  window.addEventListener("resize", updateDebugHitboxes);
 });

@@ -255,4 +255,40 @@ document.addEventListener("DOMContentLoaded", () => {
       quest_pending.style.display = "none";
     }
   });
+
+  const debugBoxChair = document.createElement("div");
+  debugBoxChair.style.position = "fixed";
+  debugBoxChair.style.backgroundColor = "rgba(211, 227, 208, 0.3)";
+  debugBoxChair.style.pointerEvents = "none";
+  debugBoxChair.style.zIndex = "9999";
+  document.body.appendChild(debugBoxChair);
+
+  const debugBoxPengy = document.createElement("div");
+  debugBoxPengy.style.position = "fixed";
+  debugBoxPengy.style.backgroundColor = "rgba(211, 227, 208, 0.3)";
+  debugBoxPengy.style.pointerEvents = "none";
+  debugBoxPengy.style.zIndex = "9999";
+  document.body.appendChild(debugBoxPengy);
+
+  function updateDebugHitboxes() {
+    const chair_x = window.innerWidth / 2.1;
+    const chair_y = window.innerHeight / 1.55;
+    const pengy_x = window.innerWidth / 3.7;
+    const pengy_y = window.innerHeight / 1.5;
+    const interaction_radius = 100;
+    const diameter = interaction_radius * 2;
+
+    debugBoxChair.style.width = diameter + "px";
+    debugBoxChair.style.height = diameter + "px";
+    debugBoxChair.style.left = chair_x - interaction_radius + "px";
+    debugBoxChair.style.top = chair_y - interaction_radius + "px";
+
+    debugBoxPengy.style.width = diameter + "px";
+    debugBoxPengy.style.height = diameter + "px";
+    debugBoxPengy.style.left = pengy_x - interaction_radius + "px";
+    debugBoxPengy.style.top = pengy_y - interaction_radius + "px";
+  }
+
+  updateDebugHitboxes();
+  window.addEventListener("resize", updateDebugHitboxes);
 });

@@ -72,4 +72,26 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
+
+  const debugBox = document.createElement("div");
+  debugBox.style.position = "fixed";
+  debugBox.style.backgroundColor = "rgba(211, 227, 208, 0.3)";
+  debugBox.style.pointerEvents = "none";
+  debugBox.style.zIndex = "9999";
+  document.body.appendChild(debugBox);
+
+  function updateDebugHitbox() {
+    const dog_x = window.innerWidth / 1.5;
+    const dog_y = window.innerHeight / 2.3;
+    const interaction_radius = 100;
+    const diameter = interaction_radius * 2;
+
+    debugBox.style.width = diameter + "px";
+    debugBox.style.height = diameter + "px";
+    debugBox.style.left = dog_x - interaction_radius + "px";
+    debugBox.style.top = dog_y - interaction_radius + "px";
+  }
+
+  updateDebugHitbox();
+  window.addEventListener("resize", updateDebugHitbox);
 });

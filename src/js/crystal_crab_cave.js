@@ -96,4 +96,40 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("fashion_show_won", "true");
     }
   });
+
+  const debugBoxSwitch = document.createElement("div");
+  debugBoxSwitch.style.position = "fixed";
+  debugBoxSwitch.style.backgroundColor = "rgba(211, 227, 208, 0.3)";
+  debugBoxSwitch.style.pointerEvents = "none";
+  debugBoxSwitch.style.zIndex = "9999";
+  document.body.appendChild(debugBoxSwitch);
+
+  const debugBoxCrystal = document.createElement("div");
+  debugBoxCrystal.style.position = "fixed";
+  debugBoxCrystal.style.backgroundColor = "rgba(211, 227, 208, 0.3)";
+  debugBoxCrystal.style.pointerEvents = "none";
+  debugBoxCrystal.style.zIndex = "9999";
+  document.body.appendChild(debugBoxCrystal);
+
+  function updateDebugHitboxes() {
+    const switch_x = window.innerWidth / 8;
+    const switch_y = window.innerHeight / 2;
+    const crystal_x = window.innerWidth / 1.2;
+    const crystal_y = window.innerHeight / 2;
+    const interaction_radius = 75;
+    const diameter = interaction_radius * 2;
+
+    debugBoxSwitch.style.width = diameter + "px";
+    debugBoxSwitch.style.height = diameter + "px";
+    debugBoxSwitch.style.left = switch_x - interaction_radius + "px";
+    debugBoxSwitch.style.top = switch_y - interaction_radius + "px";
+
+    debugBoxCrystal.style.width = diameter + "px";
+    debugBoxCrystal.style.height = diameter + "px";
+    debugBoxCrystal.style.left = crystal_x - interaction_radius + "px";
+    debugBoxCrystal.style.top = crystal_y - interaction_radius + "px";
+  }
+
+  updateDebugHitboxes();
+  window.addEventListener("resize", updateDebugHitboxes);
 });
