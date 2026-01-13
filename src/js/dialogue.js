@@ -7,6 +7,7 @@ class dialogue_manager {
     this.is_typing = false;
     this.is_finished = false;
     this.on_complete = null;
+    this.typingTimeout = null;
   }
 
   type_writer(text, on_complete) {
@@ -22,7 +23,7 @@ class dialogue_manager {
       if (i < text.length) {
         this.dialogue_text_element.innerHTML += text.charAt(i);
         i++;
-        setTimeout(typing, 25);
+        this.typingTimeout = setTimeout(typing, 25);
       } else {
         this.is_typing = false;
         if (this.dialogue_sound) {
@@ -40,11 +41,22 @@ class dialogue_manager {
     if (this.is_finished) return;
 
     if (this.is_typing) {
+      clearTimeout(this.typingTimeout);
       this.is_typing = false;
+
       this.dialogue_text_element.innerHTML =
-        this.dialogues[this.current_dialogue_index - 1];
+        this.dialogues[this.current_dialogue_index];
+
       if (this.dialogue_sound) {
         this.dialogue_sound.pause();
+      }
+
+      this.current_dialogue_index++;
+      if (this.current_dialogue_index >= this.dialogues.length) {
+        this.is_finished = true;
+        if (this.on_complete) {
+          this.on_complete();
+        }
       }
       return;
     }
