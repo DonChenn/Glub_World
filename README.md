@@ -1,4 +1,4 @@
-# Glub World Video Game
+# Glub World Video Game <img src="https://github.com/user-attachments/assets/c52bdc3a-6a10-4f6a-ac1b-07134c5b03e7" alt="glubglub" width="100"/>
 
 ## How To Play
 
